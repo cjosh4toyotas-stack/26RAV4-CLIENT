@@ -224,6 +224,8 @@ const SHEET_LIVE = true;
   .asof strong{color:var(--head);}
   .cycle{font-size:13px;color:var(--text);background:var(--surface);border-left:3px solid var(--red);padding:8px 12px;}
   .units{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;}
+  .avail-badge{display:inline-block;background:#0c8a3e;color:#fff;font-size:11px;font-weight:bold;letter-spacing:2px;padding:3px 10px;margin-left:10px;vertical-align:2px;box-shadow:0 0 12px rgba(34,197,94,0.9),0 0 4px rgba(34,197,94,0.9);animation:availglow 1.6s ease-in-out infinite alternate;}
+  @keyframes availglow{from{box-shadow:0 0 5px rgba(34,197,94,0.6);}to{box-shadow:0 0 16px rgba(34,197,94,1);}}
   .unit{background:var(--surface);border:1px solid var(--border);border-top:4px solid var(--bz-bot);padding:20px;display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s;}
   .unit.phv{border-top-color:var(--red);}
   .unit:hover{border-color:#3A3A40;box-shadow:0 0 24px rgba(0,0,0,.35);}
@@ -234,6 +236,8 @@ const SHEET_LIVE = true;
   .u-pt.phv{color:#FF4D5C;}
   .swatch{display:inline-block;width:13px;height:13px;border-radius:50%;margin-right:7px;vertical-align:-1px;border:1px solid rgba(255,255,255,.3);}
   .sw-black{background:#0b0b0d;}
+  .sw-blueprint{background:#20304f;}
+  .sw-storm{background:#6e7a86;}
   .sw-icecap{background:#f5f6f7;}
   .u-color{font-size:14px;color:var(--text);margin-top:10px;}
   .u-equip{font-size:12.5px;color:var(--gray);margin-top:6px;line-height:1.6;flex:1;}
@@ -334,27 +338,132 @@ const SHEET_LIVE = true;
 
     <div id="sheet-content">
     <div class="avail-meta">
-      <span class="asof">Updated <strong>August 27, 2026</strong> &middot; All prices are MSRP</span>
+      <span class="asof">Updated <strong>September 6, 2026</strong> &middot; All prices are MSRP</span>
       <span class="cycle">Factory allocations arrive every two weeks — the next batch is expected soon.</span>
     </div>
     <div class="units">
       <div class="unit">
-        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span>
-        <div class="u-trim">RAV4 XSE</div>
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
+        <div class="u-trim">RAV4 SE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
-        <div class="u-color"><span class="swatch sw-black"></span>Midnight Black Metallic &middot; Black interior</div>
-        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; Driver Assist Package (DA) &middot; JBL Premium Audio Package (EJ) &middot; Panoramic Moonroof Package (SR) &middot; All-Weather Liner Package (2T) &middot; Mudguards (MF)</div>
+        <div class="u-color"><span class="swatch sw-icecap"></span>Ice Cap &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; Moonroof Package (MR) &middot; All-Weather Liner Package (2T) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF)</div>
         <div class="u-priceline">
-          <div class="u-price">$45,509<span>MSRP</span></div>
-          <div class="u-ids">Temp. VIN 4T36CRAV3TU36G250</div>
+          <div class="u-price">$40,244<span>MSRP</span></div>
+          <div class="u-ids">Temp. VIN 4T36CRAV6TU40L500</div>
         </div>
         <div class="u-actions">
-          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20XSE%20Hybrid%20in%20Midnight%20Black%20Metallic%20at%20%2445%2C509%20MSRP%20(Temp.%20VIN%204T36CRAV3TU36G250).%20Is%20it%20still%20open%3F">Reserve — Text Josh</a>
-          <a class="u-learn jump" href="#trim-xse" data-pt="hevawd">What the XSE includes &darr;</a>
+          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20SE%20Hybrid%20in%20Ice%20Cap%20at%20%2440%2C244%20MSRP%20%28Temp.%20VIN%204T36CRAV6TU40L500%29.%20Is%20it%20still%20open%3F">Reserve &mdash; Text Josh</a>
+          <a class="u-learn jump" href="#trim-se" data-pt="hevawd">What the SE includes &darr;</a>
         </div>
       </div>
       <div class="unit">
-        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span>
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
+        <div class="u-trim">RAV4 SE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-black"></span>Midnight Black Metallic &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (2B)</div>
+        <div class="u-priceline">
+          <div class="u-price">$41,099<span>MSRP</span></div>
+          <div class="u-ids">Temp. VIN 4T36CRAV1TU40M439</div>
+        </div>
+        <div class="u-actions">
+          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20SE%20Hybrid%20in%20Midnight%20Black%20Metallic%20at%20%2441%2C099%20MSRP%20%28Temp.%20VIN%204T36CRAV1TU40M439%29.%20Is%20it%20still%20open%3F">Reserve &mdash; Text Josh</a>
+          <a class="u-learn jump" href="#trim-se" data-pt="hevawd">What the SE includes &darr;</a>
+        </div>
+      </div>
+      <div class="unit">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
+        <div class="u-trim">RAV4 SE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-black"></span>Midnight Black Metallic &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (2B)</div>
+        <div class="u-priceline">
+          <div class="u-price">$41,099<span>MSRP</span></div>
+          <div class="u-ids">Temp. VIN 4T36CRAV1TU41Q650</div>
+        </div>
+        <div class="u-actions">
+          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20SE%20Hybrid%20in%20Midnight%20Black%20Metallic%20at%20%2441%2C099%20MSRP%20%28Temp.%20VIN%204T36CRAV1TU41Q650%29.%20Is%20it%20still%20open%3F">Reserve &mdash; Text Josh</a>
+          <a class="u-learn jump" href="#trim-se" data-pt="hevawd">What the SE includes &darr;</a>
+        </div>
+      </div>
+      <div class="unit">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
+        <div class="u-trim">RAV4 SE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-icecap"></span>Ice Cap &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (2B)</div>
+        <div class="u-priceline">
+          <div class="u-price">$41,099<span>MSRP</span></div>
+          <div class="u-ids">Temp. VIN 4T36CRAV2TU40M059</div>
+        </div>
+        <div class="u-actions">
+          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20SE%20Hybrid%20in%20Ice%20Cap%20at%20%2441%2C099%20MSRP%20%28Temp.%20VIN%204T36CRAV2TU40M059%29.%20Is%20it%20still%20open%3F">Reserve &mdash; Text Josh</a>
+          <a class="u-learn jump" href="#trim-se" data-pt="hevawd">What the SE includes &darr;</a>
+        </div>
+      </div>
+      <div class="unit">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
+        <div class="u-trim">RAV4 SE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-icecap"></span>Ice Cap &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (2B)</div>
+        <div class="u-priceline">
+          <div class="u-price">$41,099<span>MSRP</span></div>
+          <div class="u-ids">Temp. VIN 4T36CRAV3TU41R248</div>
+        </div>
+        <div class="u-actions">
+          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20SE%20Hybrid%20in%20Ice%20Cap%20at%20%2441%2C099%20MSRP%20%28Temp.%20VIN%204T36CRAV3TU41R248%29.%20Is%20it%20still%20open%3F">Reserve &mdash; Text Josh</a>
+          <a class="u-learn jump" href="#trim-se" data-pt="hevawd">What the SE includes &darr;</a>
+        </div>
+      </div>
+      <div class="unit">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
+        <div class="u-trim">RAV4 SE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-icecap"></span>Ice Cap &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (2B)</div>
+        <div class="u-priceline">
+          <div class="u-price">$41,099<span>MSRP</span></div>
+          <div class="u-ids">Temp. VIN 4T36CRAV4TU41R470</div>
+        </div>
+        <div class="u-actions">
+          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20SE%20Hybrid%20in%20Ice%20Cap%20at%20%2441%2C099%20MSRP%20%28Temp.%20VIN%204T36CRAV4TU41R470%29.%20Is%20it%20still%20open%3F">Reserve &mdash; Text Josh</a>
+          <a class="u-learn jump" href="#trim-se" data-pt="hevawd">What the SE includes &darr;</a>
+        </div>
+      </div>
+      <div class="unit">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
+        <div class="u-trim">RAV4 SE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-blueprint"></span>Blueprint &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (2B)</div>
+        <div class="u-priceline">
+          <div class="u-price">$41,099<span>MSRP</span></div>
+          <div class="u-ids">Temp. VIN 4T36CRAV7TU41Q331</div>
+        </div>
+        <div class="u-actions">
+          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20SE%20Hybrid%20in%20Blueprint%20at%20%2441%2C099%20MSRP%20%28Temp.%20VIN%204T36CRAV7TU41Q331%29.%20Is%20it%20still%20open%3F">Reserve &mdash; Text Josh</a>
+          <a class="u-learn jump" href="#trim-se" data-pt="hevawd">What the SE includes &darr;</a>
+        </div>
+      </div>
+      <div class="unit">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
+        <div class="u-trim">RAV4 SE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-black"></span>Midnight Black Metallic &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; Moonroof Package (MR) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (2B)</div>
+        <div class="u-priceline">
+          <div class="u-price">$41,949<span>MSRP</span></div>
+          <div class="u-ids">Temp. VIN 4T36CRAV4TU41R159</div>
+        </div>
+        <div class="u-actions">
+          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20SE%20Hybrid%20in%20Midnight%20Black%20Metallic%20at%20%2441%2C949%20MSRP%20%28Temp.%20VIN%204T36CRAV4TU41R159%29.%20Is%20it%20still%20open%3F">Reserve &mdash; Text Josh</a>
+          <a class="u-learn jump" href="#trim-se" data-pt="hevawd">What the SE includes &darr;</a>
+        </div>
+      </div>
+      <div class="unit">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
         <div class="u-trim">RAV4 XSE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
         <div class="u-color"><span class="swatch sw-black"></span>Midnight Black Metallic &middot; Black interior</div>
@@ -364,40 +473,116 @@ const SHEET_LIVE = true;
           <div class="u-ids">Temp. VIN 4T36CRAV7TU39G061</div>
         </div>
         <div class="u-actions">
-          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20XSE%20Hybrid%20in%20Midnight%20Black%20Metallic%20at%20%2444%2C229%20MSRP%20(Temp.%20VIN%204T36CRAV7TU39G061).%20Is%20it%20still%20open%3F">Reserve — Text Josh</a>
+          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20XSE%20Hybrid%20in%20Midnight%20Black%20Metallic%20at%20%2444%2C229%20MSRP%20%28Temp.%20VIN%204T36CRAV7TU39G061%29.%20Is%20it%20still%20open%3F">Reserve &mdash; Text Josh</a>
           <a class="u-learn jump" href="#trim-xse" data-pt="hevawd">What the XSE includes &darr;</a>
         </div>
       </div>
       <div class="unit">
-        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span>
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
         <div class="u-trim">RAV4 XSE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
         <div class="u-color"><span class="swatch sw-black"></span>Midnight Black Metallic &middot; Black interior</div>
         <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; JBL Premium Audio Package (EJ) &middot; All-Weather Liner Package (2T)</div>
         <div class="u-priceline">
           <div class="u-price">$44,229<span>MSRP</span></div>
-          <div class="u-ids">Temp. VIN 4T36CRAV8TU39G814</div>
+          <div class="u-ids">Temp. VIN 4T36CRAV8TU38G929</div>
         </div>
         <div class="u-actions">
-          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20XSE%20Hybrid%20in%20Midnight%20Black%20Metallic%20at%20%2444%2C229%20MSRP%20(Temp.%20VIN%204T36CRAV8TU39G814).%20Is%20it%20still%20open%3F">Reserve — Text Josh</a>
+          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20XSE%20Hybrid%20in%20Midnight%20Black%20Metallic%20at%20%2444%2C229%20MSRP%20%28Temp.%20VIN%204T36CRAV8TU38G929%29.%20Is%20it%20still%20open%3F">Reserve &mdash; Text Josh</a>
+          <a class="u-learn jump" href="#trim-xse" data-pt="hevawd">What the XSE includes &darr;</a>
+        </div>
+      </div>
+      <div class="unit">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
+        <div class="u-trim">RAV4 XSE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-black"></span>Midnight Black Metallic &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; JBL Premium Audio Package (EJ) &middot; All-Weather Liner Package (2T) &middot; Mudguards (MF)</div>
+        <div class="u-priceline">
+          <div class="u-price">$44,389<span>MSRP</span></div>
+          <div class="u-ids">Temp. VIN 4T36CRAV1TU38G545</div>
+        </div>
+        <div class="u-actions">
+          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20XSE%20Hybrid%20in%20Midnight%20Black%20Metallic%20at%20%2444%2C389%20MSRP%20%28Temp.%20VIN%204T36CRAV1TU38G545%29.%20Is%20it%20still%20open%3F">Reserve &mdash; Text Josh</a>
+          <a class="u-learn jump" href="#trim-xse" data-pt="hevawd">What the XSE includes &darr;</a>
+        </div>
+      </div>
+      <div class="unit">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
+        <div class="u-trim">RAV4 XSE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-black"></span>Midnight Black Metallic &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; Driver Assist Package (DA) &middot; JBL Premium Audio Package (EJ) &middot; Panoramic Moonroof Package (SR) &middot; All-Weather Liner Package (2T) &middot; Mudguards (MF)</div>
+        <div class="u-priceline">
+          <div class="u-price">$45,509<span>MSRP</span></div>
+          <div class="u-ids">Temp. VIN 4T36CRAV3TU36G250</div>
+        </div>
+        <div class="u-actions">
+          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20XSE%20Hybrid%20in%20Midnight%20Black%20Metallic%20at%20%2445%2C509%20MSRP%20%28Temp.%20VIN%204T36CRAV3TU36G250%29.%20Is%20it%20still%20open%3F">Reserve &mdash; Text Josh</a>
+          <a class="u-learn jump" href="#trim-xse" data-pt="hevawd">What the XSE includes &darr;</a>
+        </div>
+      </div>
+      <div class="unit">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
+        <div class="u-trim">RAV4 XSE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-black"></span>Midnight Black Metallic &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; JBL Premium Audio Package (EJ) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF)</div>
+        <div class="u-priceline">
+          <div class="u-price">$46,389<span>MSRP</span></div>
+          <div class="u-ids">Temp. VIN 4T36CRAV0TU40M271</div>
+        </div>
+        <div class="u-actions">
+          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20XSE%20Hybrid%20in%20Midnight%20Black%20Metallic%20at%20%2446%2C389%20MSRP%20%28Temp.%20VIN%204T36CRAV0TU40M271%29.%20Is%20it%20still%20open%3F">Reserve &mdash; Text Josh</a>
+          <a class="u-learn jump" href="#trim-xse" data-pt="hevawd">What the XSE includes &darr;</a>
+        </div>
+      </div>
+      <div class="unit">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
+        <div class="u-trim">RAV4 XSE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-black"></span>Midnight Black Metallic &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; JBL Premium Audio Package (EJ) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF)</div>
+        <div class="u-priceline">
+          <div class="u-price">$46,389<span>MSRP</span></div>
+          <div class="u-ids">Temp. VIN 4T36CRAV4TU41R291</div>
+        </div>
+        <div class="u-actions">
+          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20XSE%20Hybrid%20in%20Midnight%20Black%20Metallic%20at%20%2446%2C389%20MSRP%20%28Temp.%20VIN%204T36CRAV4TU41R291%29.%20Is%20it%20still%20open%3F">Reserve &mdash; Text Josh</a>
           <a class="u-learn jump" href="#trim-xse" data-pt="hevawd">What the XSE includes &darr;</a>
         </div>
       </div>
       <div class="unit phv">
-        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span>
-        <div class="u-trim">RAV4 Plug-in Hybrid Woodland</div>
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
+        <div class="u-trim">RAV4 Plug-in Hybrid SE</div>
         <div class="u-pt phv">Plug-in Hybrid AWD &middot; 324 hp &middot; 49-mile EV range<sup>1</sup></div>
-        <div class="u-color"><span class="swatch sw-icecap"></span>Ice Cap &middot; Mineral interior</div>
-        <div class="u-equip"><b>Options:</b> Moonroof Package (MR)</div>
+        <div class="u-color"><span class="swatch sw-icecap"></span>Ice Cap &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Blackout Emblem Overlays (3J) &middot; Low Profile Cross Bars (3T) &middot; Door Edge Guards (D5) &middot; Door Sill Protectors (D9) &middot; Mudguards (MF)</div>
         <div class="u-priceline">
-          <div class="u-price">$47,745<span>MSRP</span></div>
-          <div class="u-ids">Stock #S262079<br>VIN JTM7ERAV3TD024322</div>
+          <div class="u-price">$45,118<span>MSRP</span></div>
+          <div class="u-ids">Temp. VIN JTM7ERAV7T135CM28</div>
         </div>
         <div class="u-actions">
-          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20Plug-in%20Hybrid%20Woodland%20in%20Ice%20Cap%20at%20%2447%2C745%20MSRP%20(Stock%20%23S262079).%20Is%20it%20still%20open%3F">Reserve — Text Josh</a>
-          <a class="u-learn jump" href="#trim-wdl" data-pt="phev">What the Woodland includes &darr;</a>
+          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20Plug-in%20Hybrid%20SE%20in%20Ice%20Cap%20at%20%2445%2C118%20MSRP%20%28Temp.%20VIN%20JTM7ERAV7T135CM28%29.%20Is%20it%20still%20open%3F">Reserve &mdash; Text Josh</a>
+          <a class="u-learn jump" href="#trim-se" data-pt="phev">What the SE includes &darr;</a>
         </div>
       </div>
+      <div class="unit">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
+        <div class="u-trim">RAV4 Woodland</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-storm"></span>Storm Cloud &middot; Mineral interior</div>
+        <div class="u-equip"><b>Options:</b> Moonroof Package (MR) &middot; Blackout Emblem Overlays (3J) &middot; Rear Cargo Lamps (43) &middot; Illumination Package (4A) &middot; Mudguards (MF)</div>
+        <div class="u-priceline">
+          <div class="u-price">$44,145<span>MSRP</span></div>
+          <div class="u-ids">Temp. VIN 2T36CRAV0TW41F744</div>
+        </div>
+        <div class="u-actions">
+          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20Woodland%20Hybrid%20in%20Storm%20Cloud%20at%20%2444%2C145%20MSRP%20%28Temp.%20VIN%202T36CRAV0TW41F744%29.%20Is%20it%20still%20open%3F">Reserve &mdash; Text Josh</a>
+          <a class="u-learn jump" href="#trim-wdl" data-pt="hevawd">What the Woodland includes &darr;</a>
+        </div>
+      </div>
+
     </div>
 
     <div class="how">
