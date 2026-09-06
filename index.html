@@ -78,6 +78,12 @@ const SHEET_LIVE = true;
     radial-gradient(1100px 620px at 88% -5%, rgba(30,143,224,.11), transparent 55%),
     radial-gradient(900px 540px at -5% 105%, rgba(235,10,30,.065), transparent 55%),
     linear-gradient(160deg,#0B0D15 0%,#0E1322 48%,#090B11 100%);}
+  #available .sec-label{color:#22c55e;text-shadow:0 0 10px rgba(34,197,94,.8),0 0 3px rgba(34,197,94,.8);}
+  .pt-key{display:flex;gap:18px;flex-wrap:wrap;margin:10px 0 16px;font-size:13px;color:var(--text);}
+  .pt-key span{display:inline-flex;align-items:center;gap:7px;font-weight:bold;}
+  .pt-key i{display:inline-block;width:14px;height:14px;border-radius:2px;}
+  .pt-key .k-hev i{background:var(--bz-bot);box-shadow:0 0 8px var(--bz-glow);}
+  .pt-key .k-phv i{background:var(--red);box-shadow:0 0 8px var(--red-glow);}
   .sec-label{font-size:12px;font-weight:bold;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:8px;}
   .sec-title{font-size:clamp(22px,3vw,32px);color:var(--head);margin-bottom:10px;line-height:1.15;}
   .sec-intro{max-width:700px;color:var(--gray);font-size:15px;margin-bottom:28px;}
@@ -224,7 +230,7 @@ const SHEET_LIVE = true;
   .asof strong{color:var(--head);}
   .cycle{font-size:13px;color:var(--text);background:var(--surface);border-left:3px solid var(--red);padding:8px 12px;}
   .units{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;}
-  .avail-badge{display:inline-block;background:#0c8a3e;color:#fff;font-size:11px;font-weight:bold;letter-spacing:2px;padding:3px 10px;margin-left:10px;vertical-align:2px;box-shadow:0 0 12px rgba(34,197,94,0.9),0 0 4px rgba(34,197,94,0.9);animation:availglow 1.6s ease-in-out infinite alternate;}
+  .avail-badge{display:inline-block;align-self:flex-start;background:#0c8a3e;color:#fff;font-size:10px;font-weight:bold;letter-spacing:.14em;text-transform:uppercase;padding:4px 9px;margin:-6px 0 12px;box-shadow:0 0 12px rgba(34,197,94,0.9),0 0 4px rgba(34,197,94,0.9);animation:availglow 1.6s ease-in-out infinite alternate;}
   @keyframes availglow{from{box-shadow:0 0 5px rgba(34,197,94,0.6);}to{box-shadow:0 0 16px rgba(34,197,94,1);}}
   .unit{background:var(--surface);border:1px solid var(--border);border-top:4px solid var(--bz-bot);padding:20px;display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s;}
   .unit.phv{border-top-color:var(--red);}
@@ -247,7 +253,7 @@ const SHEET_LIVE = true;
   .u-price span{font-size:11px;color:var(--gray);font-weight:bold;letter-spacing:.1em;text-transform:uppercase;margin-left:5px;}
   .u-ids{font-size:11px;color:var(--gray);margin-top:4px;font-family:'Courier New',Courier,monospace;letter-spacing:.3px;text-align:right;line-height:1.5;}
   .u-actions{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
-  .u-reserve{flex:1;text-align:center;background:var(--red);color:#fff;font-weight:bold;font-size:14px;text-decoration:none;padding:12px 14px;border-radius:2px;box-shadow:0 0 16px rgba(235,10,30,.25);white-space:nowrap;}
+  .u-reserve{flex:1;text-align:center;background:#0c8a3e;color:#fff;font-weight:bold;font-size:14px;text-decoration:none;padding:12px 14px;border-radius:2px;box-shadow:0 0 16px rgba(34,197,94,0.9),0 0 5px rgba(34,197,94,0.9);animation:availglow 1.6s ease-in-out infinite alternate;white-space:nowrap;}
   .u-learn{flex:1;text-align:center;border:1.5px solid #55555C;color:var(--text);font-weight:bold;font-size:13px;text-decoration:none;padding:11px 12px;border-radius:2px;white-space:nowrap;transition:border-color .15s;}
   .u-learn:hover{border-color:#9A9AA2;}
   .how{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:28px;}
@@ -341,6 +347,10 @@ const SHEET_LIVE = true;
       <span class="asof">Updated <strong>September 6, 2026</strong> &middot; All prices are MSRP</span>
       <span class="cycle">Factory allocations arrive every two weeks — the next batch is expected soon.</span>
     </div>
+    <div class="pt-key">
+      <span class="k-hev"><i></i>Blue: Hybrid</span>
+      <span class="k-phv"><i></i>Red: Plug-in Hybrid</span>
+    </div>
     <div class="units">
       <div class="unit">
         <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
@@ -362,7 +372,7 @@ const SHEET_LIVE = true;
         <div class="u-trim">RAV4 SE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
         <div class="u-color"><span class="swatch sw-black"></span>Midnight Black Metallic &middot; Black interior</div>
-        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (2B)</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Door Panel Scuff Protectors (2B)</div>
         <div class="u-priceline">
           <div class="u-price">$41,099<span>MSRP</span></div>
           <div class="u-ids">Temp. VIN 4T36CRAV1TU40M439</div>
@@ -377,7 +387,7 @@ const SHEET_LIVE = true;
         <div class="u-trim">RAV4 SE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
         <div class="u-color"><span class="swatch sw-black"></span>Midnight Black Metallic &middot; Black interior</div>
-        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (2B)</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Door Panel Scuff Protectors (2B)</div>
         <div class="u-priceline">
           <div class="u-price">$41,099<span>MSRP</span></div>
           <div class="u-ids">Temp. VIN 4T36CRAV1TU41Q650</div>
@@ -392,7 +402,7 @@ const SHEET_LIVE = true;
         <div class="u-trim">RAV4 SE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
         <div class="u-color"><span class="swatch sw-icecap"></span>Ice Cap &middot; Black interior</div>
-        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (2B)</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Door Panel Scuff Protectors (2B)</div>
         <div class="u-priceline">
           <div class="u-price">$41,099<span>MSRP</span></div>
           <div class="u-ids">Temp. VIN 4T36CRAV2TU40M059</div>
@@ -407,7 +417,7 @@ const SHEET_LIVE = true;
         <div class="u-trim">RAV4 SE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
         <div class="u-color"><span class="swatch sw-icecap"></span>Ice Cap &middot; Black interior</div>
-        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (2B)</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Door Panel Scuff Protectors (2B)</div>
         <div class="u-priceline">
           <div class="u-price">$41,099<span>MSRP</span></div>
           <div class="u-ids">Temp. VIN 4T36CRAV3TU41R248</div>
@@ -422,7 +432,7 @@ const SHEET_LIVE = true;
         <div class="u-trim">RAV4 SE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
         <div class="u-color"><span class="swatch sw-icecap"></span>Ice Cap &middot; Black interior</div>
-        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (2B)</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Door Panel Scuff Protectors (2B)</div>
         <div class="u-priceline">
           <div class="u-price">$41,099<span>MSRP</span></div>
           <div class="u-ids">Temp. VIN 4T36CRAV4TU41R470</div>
@@ -437,7 +447,7 @@ const SHEET_LIVE = true;
         <div class="u-trim">RAV4 SE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
         <div class="u-color"><span class="swatch sw-blueprint"></span>Blueprint &middot; Black interior</div>
-        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (2B)</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Door Panel Scuff Protectors (2B)</div>
         <div class="u-priceline">
           <div class="u-price">$41,099<span>MSRP</span></div>
           <div class="u-ids">Temp. VIN 4T36CRAV7TU41Q331</div>
@@ -452,7 +462,7 @@ const SHEET_LIVE = true;
         <div class="u-trim">RAV4 SE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
         <div class="u-color"><span class="swatch sw-black"></span>Midnight Black Metallic &middot; Black interior</div>
-        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; Moonroof Package (MR) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (2B)</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; Moonroof Package (MR) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Door Panel Scuff Protectors (2B)</div>
         <div class="u-priceline">
           <div class="u-price">$41,949<span>MSRP</span></div>
           <div class="u-ids">Temp. VIN 4T36CRAV4TU41R159</div>
