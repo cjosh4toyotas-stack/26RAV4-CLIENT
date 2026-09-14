@@ -246,25 +246,48 @@ const SHEET_LIVE = true;
   .sw-storm{background:#6e7a86;}
   .sw-icecap{background:#f5f6f7;}
   .sw-meteor{background:#45484d;}
-  /* Trim tabs */
-  .trim-tabs{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 22px;border-bottom:1px solid var(--border);padding-bottom:0;}
-  .ttab{display:inline-flex;align-items:center;gap:9px;background:transparent;border:0;border-bottom:3px solid transparent;color:var(--gray);font-family:inherit;font-size:14px;font-weight:bold;letter-spacing:.04em;text-transform:uppercase;padding:12px 14px 11px;cursor:pointer;margin-bottom:-1px;transition:color .15s,border-color .15s;white-space:nowrap;}
-  .ttab:hover{color:var(--head);}
-  .ttab .tc{display:inline-block;min-width:24px;text-align:center;font-size:12px;padding:2px 7px;border-radius:12px;background:var(--surface-2);border:1px solid var(--border);color:var(--gray);}
-  .ttab[aria-selected="true"]{color:var(--head);border-bottom-color:var(--red);}
-  .ttab:not(.none) .tc{background:#0c8a3e;border-color:#0c8a3e;color:#fff;box-shadow:0 0 10px rgba(34,197,94,.7);}
-  .ttab.none{color:#6B6F76;}
-  .ttab.none[aria-selected="true"]{color:var(--text);}
-  .tpanel[hidden]{display:none;}
-  .tempty{background:var(--surface);border-left:4px solid var(--red);padding:22px 22px;max-width:760px;}
-  .tempty .big{font-size:17px;font-weight:bold;color:var(--head);}
-  .tempty p{font-size:14px;color:var(--gray);margin-top:8px;}
-  .tempty a{color:#fff;font-weight:bold;text-decoration:none;}
-  @media (max-width:600px){
-    .trim-tabs{gap:2px;}
-    .ttab{font-size:13px;padding:10px 9px 9px;gap:6px;}
-  }
-  @media print{.trim-tabs{display:none !important;}.tpanel[hidden]{display:block !important;}}
+  .sw-windchill{background:#dfe3e6;}
+  .sw-ruby{background:#7a1020;}
+  .sw-unknown{background:linear-gradient(135deg,#555 50%,#888 50%);}
+  /* Grade buttons */
+  .grade-hdr{font-size:12px;font-weight:bold;letter-spacing:.16em;text-transform:uppercase;margin:14px 0 8px;}
+  .grade-hdr.hev{color:#5FB4EE;}
+  .grade-hdr.phv{color:#FF4D5C;}
+  .grade-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 10px;}
+  .gbtn{position:relative;display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:3px;border:2px solid transparent;border-radius:4px;padding:18px 18px 16px;cursor:pointer;font-family:inherit;transition:transform .12s,box-shadow .15s,border-color .15s;text-shadow:0 1px 3px rgba(0,0,0,.7);}
+  .gbtn.hev{background:linear-gradient(165deg,var(--bz-top) 0%,var(--bz-mid) 55%,var(--bz-bot) 130%);box-shadow:0 0 22px var(--bz-glow);border-color:rgba(30,143,224,.35);}
+  .gbtn.phv{background:linear-gradient(165deg,var(--rz-top) 0%,var(--rz-mid) 55%,var(--rz-bot) 130%);box-shadow:0 0 20px var(--red-glow);border-color:rgba(235,10,30,.35);}
+  .gbtn.open{color:#22c55e;}
+  .gbtn.res{color:#FF4D5C;}
+  .gbtn.phv.res{color:#FF6B78;}
+  .gbtn:hover{transform:translateY(-2px);}
+  .gbtn[aria-selected="true"]{border-color:#fff;box-shadow:0 0 0 3px rgba(255,255,255,.18),0 0 26px rgba(255,255,255,.25);}
+  .gbtn .gname{font-size:22px;font-weight:bold;text-transform:uppercase;letter-spacing:.03em;line-height:1.1;}
+  .gbtn .gpt{font-size:11px;font-weight:bold;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.8);}
+  .gbtn .gprice{margin-top:8px;font-size:19px;font-weight:bold;}
+  .gbtn .gprice i{font-style:normal;font-size:10px;letter-spacing:.12em;margin-left:6px;color:rgba(255,255,255,.75);}
+  .gbtn .gfoot{display:flex;flex-direction:column;align-items:flex-start;gap:7px;width:100%;margin-top:10px;}
+  .gbtn .gstat{font-size:12px;font-weight:bold;letter-spacing:.12em;text-transform:uppercase;background:rgba(0,0,0,.4);padding:5px 10px;border-radius:2px;}
+  .gbtn.open .gstat{box-shadow:0 0 10px rgba(34,197,94,.6);}
+  .gbtn .gmore{font-size:11px;color:rgba(255,255,255,.75);white-space:nowrap;}
+  .gbtn .gmore::after{content:" \25BE";}
+  .gbtn[aria-selected="true"] .gmore::after{content:" \25B4";}
+  .gh-name em{font-style:normal;font-size:14px;letter-spacing:.1em;margin-left:8px;}
+  .gh-name em.hev{color:#5FB4EE;}
+  .gh-name em.phv{color:#FF4D5C;}
+  .gpanel[hidden]{display:none;}
+  .gpanel{border-top:1px solid var(--border);padding-top:18px;margin-top:6px;}
+  .gpanel-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;margin-bottom:16px;}
+  .gh-name{font-size:20px;font-weight:bold;color:var(--head);text-transform:uppercase;letter-spacing:.03em;}
+  .gh-sub{font-size:13px;color:var(--gray);}
+  /* Reserved cards */
+  .sold-badge{display:inline-block;align-self:flex-start;background:var(--red);color:#fff;font-size:10px;font-weight:bold;letter-spacing:.14em;text-transform:uppercase;padding:4px 9px;margin:-6px 0 12px;}
+  .unit.sold{opacity:.62;border-top-color:#3a3a40;}
+  .unit.sold.phv{border-top-color:#5a1a20;}
+  .unit.sold:hover{opacity:.85;}
+  @media (max-width:820px){.grade-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:480px){.grade-grid{grid-template-columns:1fr;}.gbtn .gname{font-size:20px;}}
+  @media print{.gpanel[hidden]{display:block !important;}.gbtn{box-shadow:none !important;}}
   .u-color{font-size:14px;color:var(--text);margin-top:10px;}
   .u-equip{font-size:12.5px;color:var(--gray);margin-top:6px;line-height:1.6;flex:1;}
   .u-equip b{color:var(--gold);}
@@ -355,8 +378,8 @@ const SHEET_LIVE = true;
 <section id="available">
   <div class="wrap">
     <div class="sec-label">Available Now</div>
-    <h2 class="sec-title">Incoming RAV4s you can claim today.</h2>
-    <p class="sec-intro">These units are factory allocated to McGrath Toyota and scheduled for production — they can be reserved <strong>before they're built</strong>. Not sure which trim fits you? Everything below this section explains exactly what each trim comes with.</p>
+    <h2 class="sec-title">Every 2026 RAV4 in our pipeline, by grade.</h2>
+    <p class="sec-intro">Pick a grade to see every unit McGrath Toyota has on the lot, in transit or scheduled for production — <strong style="color:#5FB4EE">blue</strong> buttons are Hybrids, <strong style="color:#FF4D5C">red</strong> buttons are Plug-in Hybrids. <strong style="color:#22c55e">Green lettering</strong> means that grade has units you can claim today; <strong style="color:#FF4D5C">red lettering</strong> means every one is reserved, but you can still see what they were built and priced at. Allocated units can be reserved <strong>before they're built</strong>. Everything below this section explains exactly what each trim comes with.</p>
     <div id="offline-msg">
       <div class="big">The availability list is temporarily offline.</div>
       <p>We&rsquo;re updating it against the latest factory allocation. For current 2026 RAV4 availability, call or text Josh directly at <a href="tel:3196311461">319-631-1461</a>. The trim guide below is still current.</p>
@@ -371,41 +394,321 @@ const SHEET_LIVE = true;
       <span class="k-hev"><i></i>Blue: Hybrid</span>
       <span class="k-phv"><i></i>Red: Plug-in Hybrid</span>
     </div>
-    <div class="trim-tabs" role="tablist" aria-label="Available units by trim">
-      <button class="ttab none" role="tab" data-tab="le" aria-selected="false"><span class="tl">LE</span><span class="tc">0</span></button>
-      <button class="ttab none" role="tab" data-tab="xlep" aria-selected="false"><span class="tl">XLE Premium</span><span class="tc">0</span></button>
-      <button class="ttab none" role="tab" data-tab="ltd" aria-selected="false"><span class="tl">Limited</span><span class="tc">0</span></button>
-      <button class="ttab none" role="tab" data-tab="wdl" aria-selected="false"><span class="tl">Woodland</span><span class="tc">0</span></button>
-      <button class="ttab" role="tab" data-tab="se" aria-selected="false"><span class="tl">SE</span><span class="tc">7</span></button>
-      <button class="ttab" role="tab" data-tab="xse" aria-selected="false"><span class="tl">XSE</span><span class="tc">7</span></button>
+    <div class="grade-hdr hev">Hybrid &middot; 236 hp</div>
+    <div class="grade-grid" role="tablist" aria-label="Hybrid &middot; 236 hp">
+      <button class="gbtn hev res" role="tab" data-g="le-hev" aria-selected="false" aria-controls="gp-le-hev">
+        <span class="gname">RAV4 LE</span>
+        <span class="gpt">Hybrid &middot; 4 in pipeline</span>
+        <span class="gprice">$35,234<i>MSRP</i></span>
+        <span class="gfoot"><span class="gstat">All 4 reserved</span><span class="gmore">Tap to view units</span></span>
+      </button>
+      <button class="gbtn hev res" role="tab" data-g="xlep-hev" aria-selected="false" aria-controls="gp-xlep-hev">
+        <span class="gname">RAV4 XLE Premium</span>
+        <span class="gpt">Hybrid &middot; 11 in pipeline</span>
+        <span class="gprice">$39,434&ndash;$44,649<i>MSRP</i></span>
+        <span class="gfoot"><span class="gstat">All 11 reserved</span><span class="gmore">Tap to view units</span></span>
+      </button>
+      <button class="gbtn hev res" role="tab" data-g="ltd-hev" aria-selected="false" aria-controls="gp-ltd-hev">
+        <span class="gname">RAV4 Limited</span>
+        <span class="gpt">Hybrid &middot; 5 in pipeline</span>
+        <span class="gprice">$45,834&ndash;$48,558<i>MSRP</i></span>
+        <span class="gfoot"><span class="gstat">All 5 reserved</span><span class="gmore">Tap to view units</span></span>
+      </button>
+      <button class="gbtn hev res" role="tab" data-g="wdl-hev" aria-selected="false" aria-controls="gp-wdl-hev">
+        <span class="gname">RAV4 Woodland</span>
+        <span class="gpt">Hybrid &middot; 1 in pipeline</span>
+        <span class="gprice">$42,505<i>MSRP</i></span>
+        <span class="gfoot"><span class="gstat">All 1 reserved</span><span class="gmore">Tap to view units</span></span>
+      </button>
+      <button class="gbtn hev open" role="tab" data-g="se-hev" aria-selected="false" aria-controls="gp-se-hev">
+        <span class="gname">RAV4 SE</span>
+        <span class="gpt">Hybrid &middot; 18 in pipeline</span>
+        <span class="gprice">$37,695&ndash;$41,099<i>MSRP</i></span>
+        <span class="gfoot"><span class="gstat">7 available &middot; 11 reserved</span><span class="gmore">Tap to view units</span></span>
+      </button>
+      <button class="gbtn hev open" role="tab" data-g="xse-hev" aria-selected="false" aria-controls="gp-xse-hev">
+        <span class="gname">RAV4 XSE</span>
+        <span class="gpt">Hybrid &middot; 10 in pipeline</span>
+        <span class="gprice">$44,229&ndash;$46,389<i>MSRP</i></span>
+        <span class="gfoot"><span class="gstat">7 available &middot; 3 reserved</span><span class="gmore">Tap to view units</span></span>
+      </button>
     </div>
-    <div class="tpanel" data-panel="le" role="tabpanel" hidden>
-    <div class="tempty">
-      <div class="big">Every incoming RAV4 LE is currently reserved.</div>
-      <p>Nothing on the LE is open right now, but factory allocations arrive every two weeks. Send me the color and packages you want and I&rsquo;ll match you against the next allocation — <a href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27m%20interested%20in%20a%202026%20RAV4%20LE.%20Can%20you%20match%20me%20against%20the%20next%20allocation%3F">text Josh</a> or call <a href="tel:3196311461">319-631-1461</a>.</p>
+    <div class="grade-hdr phv">Plug-in Hybrid &middot; 324 hp</div>
+    <div class="grade-grid" role="tablist" aria-label="Plug-in Hybrid &middot; 324 hp">
+      <button class="gbtn phv res" role="tab" data-g="wdl-phv" aria-selected="false" aria-controls="gp-wdl-phv">
+        <span class="gname">RAV4 Woodland</span>
+        <span class="gpt">Plug-in Hybrid &middot; 1 in pipeline</span>
+        <span class="gprice">$46,895<i>MSRP</i></span>
+        <span class="gfoot"><span class="gstat">All 1 reserved</span><span class="gmore">Tap to view units</span></span>
+      </button>
+      <button class="gbtn phv res" role="tab" data-g="se-phv" aria-selected="false" aria-controls="gp-se-phv">
+        <span class="gname">RAV4 SE</span>
+        <span class="gpt">Plug-in Hybrid &middot; 2 in pipeline</span>
+        <span class="gprice">$44,794&ndash;$45,059<i>MSRP</i></span>
+        <span class="gfoot"><span class="gstat">All 2 reserved</span><span class="gmore">Tap to view units</span></span>
+      </button>
+      <button class="gbtn phv res" role="tab" data-g="xse-phv" aria-selected="false" aria-controls="gp-xse-phv">
+        <span class="gname">RAV4 XSE</span>
+        <span class="gpt">Plug-in Hybrid &middot; 2 in pipeline</span>
+        <span class="gprice">$51,218&ndash;$54,739<i>MSRP</i></span>
+        <span class="gfoot"><span class="gstat">All 2 reserved</span><span class="gmore">Tap to view units</span></span>
+      </button>
     </div>
+    <div class="gpanel" id="gp-le-hev" data-g="le-hev" role="tabpanel" hidden>
+      <div class="gpanel-head"><span class="gh-name">RAV4 LE <em class="hev">Hybrid</em></span><span class="gh-sub">All 4 reserved &middot; MSRP shown &middot; tap the button again to close</span></div>
+      <div class="units">
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 LE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-meteor"></span>Meteor Shower</div>
+        <div class="u-equip"><b>Options:</b> All-Weather Liner Package (2T)</div>
+        <div class="u-priceline">
+          <div class="u-price">$35,234<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">In Transit</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 LE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-meteor"></span>Meteor Shower</div>
+        <div class="u-equip"><b>Options:</b> All-Weather Liner Package (2T)</div>
+        <div class="u-priceline">
+          <div class="u-price">$35,234<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 LE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-icecap"></span>Ice Cap</div>
+        <div class="u-equip"><b>Options:</b> All-Weather Liner Package (2T)</div>
+        <div class="u-priceline">
+          <div class="u-price">$35,234<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 LE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-icecap"></span>Ice Cap</div>
+        <div class="u-equip"><b>Options:</b> All-Weather Liner Package (2T)</div>
+        <div class="u-priceline">
+          <div class="u-price">$35,234<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      </div>
     </div>
-    <div class="tpanel" data-panel="xlep" role="tabpanel" hidden>
-    <div class="tempty">
-      <div class="big">Every incoming RAV4 XLE Premium is currently reserved.</div>
-      <p>Nothing on the XLE Premium is open right now, but factory allocations arrive every two weeks. Send me the color and packages you want and I&rsquo;ll match you against the next allocation — <a href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27m%20interested%20in%20a%202026%20RAV4%20XLE%20Premium.%20Can%20you%20match%20me%20against%20the%20next%20allocation%3F">text Josh</a> or call <a href="tel:3196311461">319-631-1461</a>.</p>
+    <div class="gpanel" id="gp-xlep-hev" data-g="xlep-hev" role="tabpanel" hidden>
+      <div class="gpanel-head"><span class="gh-name">RAV4 XLE Premium <em class="hev">Hybrid</em></span><span class="gh-sub">All 11 reserved &middot; MSRP shown &middot; tap the button again to close</span></div>
+      <div class="units">
+      <div class="unit sold">
+        <span class="u-status">In Transit</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 XLE Premium</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-storm"></span>Storm Cloud</div>
+        <div class="u-equip"><b>Options:</b> All-Weather Liner Package (2T)</div>
+        <div class="u-priceline">
+          <div class="u-price">$39,434<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 XLE Premium</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-blueprint"></span>Blueprint</div>
+        <div class="u-equip"><b>Options:</b> All-Weather Liner Package (2T) &middot; Low Profile Cross Bars (3T)</div>
+        <div class="u-priceline">
+          <div class="u-price">$39,754<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 XLE Premium</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-meteor"></span>Meteor Shower</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; All-Weather Liner Package (2T)</div>
+        <div class="u-priceline">
+          <div class="u-price">$39,809<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">In Transit</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 XLE Premium</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-meteor"></span>Meteor Shower</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; All-Weather Liner Package (2T)</div>
+        <div class="u-priceline">
+          <div class="u-price">$39,809<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 XLE Premium</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-black"></span>Midnight Black Metallic</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; All-Weather Liner Package (2T)</div>
+        <div class="u-priceline">
+          <div class="u-price">$39,809<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 XLE Premium</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-blueprint"></span>Blueprint</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Door Edge Guards (D5) &middot; Mudguards (MF)</div>
+        <div class="u-priceline">
+          <div class="u-price">$40,134<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">On the Lot</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 XLE Premium</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-ruby"></span>Ruby Flare Pearl</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Additional accessories (PC)</div>
+        <div class="u-priceline">
+          <div class="u-price">$40,284<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">On the Lot</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 XLE Premium</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-windchill"></span>Wind Chill Pearl</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Additional accessories (PC)</div>
+        <div class="u-priceline">
+          <div class="u-price">$40,284<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">On the Lot</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 XLE Premium</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-ruby"></span>Ruby Flare Pearl</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; Driver Assist Package (DA) &middot; Panoramic Moonroof Package (SR) &middot; All-Weather Liner Package (2T) &middot; Door Edge Guards (D5) &middot; Additional accessories (PC)</div>
+        <div class="u-priceline">
+          <div class="u-price">$42,949<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 XLE Premium</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-windchill"></span>Wind Chill Pearl</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; Panoramic Moonroof Package (SR) &middot; All-Weather Liner Package (2T) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (PC EG)</div>
+        <div class="u-priceline">
+          <div class="u-price">$43,999<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 XLE Premium</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-windchill"></span>Wind Chill Pearl</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; Driver Assist Package (DA) &middot; Panoramic Moonroof Package (SR) &middot; All-Weather Liner Package (2T) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (PC EG)</div>
+        <div class="u-priceline">
+          <div class="u-price">$44,649<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      </div>
     </div>
+    <div class="gpanel" id="gp-ltd-hev" data-g="ltd-hev" role="tabpanel" hidden>
+      <div class="gpanel-head"><span class="gh-name">RAV4 Limited <em class="hev">Hybrid</em></span><span class="gh-sub">All 5 reserved &middot; MSRP shown &middot; tap the button again to close</span></div>
+      <div class="units">
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 Limited</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-blueprint"></span>Blueprint</div>
+        <div class="u-equip"><b>Options:</b> All-Weather Liner Package (2T) &middot; Additional accessories (HU)</div>
+        <div class="u-priceline">
+          <div class="u-price">$45,834<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 Limited</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-storm"></span>Storm Cloud</div>
+        <div class="u-equip"><b>Options:</b> All-Weather Liner Package (2T) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (HU G4)</div>
+        <div class="u-priceline">
+          <div class="u-price">$46,814<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 Limited</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-ruby"></span>Ruby Flare Pearl</div>
+        <div class="u-equip"><b>Options:</b> All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Door Panel Scuff Protectors (2B) &middot; Additional accessories (PC 1Y)</div>
+        <div class="u-priceline">
+          <div class="u-price">$46,914<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 Limited</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-windchill"></span>Wind Chill Pearl</div>
+        <div class="u-equip"><b>Options:</b> Mudguards (MF) &middot; Additional accessories (HU PC WU 63)</div>
+        <div class="u-priceline">
+          <div class="u-price">$47,569<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 Limited</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-windchill"></span>Wind Chill Pearl</div>
+        <div class="u-equip"><b>Options:</b> All-Weather Liner Package (2T) &middot; Blackout Emblem Overlays (3J) &middot; Rear Cargo Lamps (43) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (HU PC)</div>
+        <div class="u-priceline">
+          <div class="u-price">$48,558<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      </div>
     </div>
-    <div class="tpanel" data-panel="ltd" role="tabpanel" hidden>
-    <div class="tempty">
-      <div class="big">Every incoming RAV4 Limited is currently reserved.</div>
-      <p>Nothing on the Limited is open right now, but factory allocations arrive every two weeks. Send me the color and packages you want and I&rsquo;ll match you against the next allocation — <a href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27m%20interested%20in%20a%202026%20RAV4%20Limited.%20Can%20you%20match%20me%20against%20the%20next%20allocation%3F">text Josh</a> or call <a href="tel:3196311461">319-631-1461</a>.</p>
+    <div class="gpanel" id="gp-wdl-hev" data-g="wdl-hev" role="tabpanel" hidden>
+      <div class="gpanel-head"><span class="gh-name">RAV4 Woodland <em class="hev">Hybrid</em></span><span class="gh-sub">All 1 reserved &middot; MSRP shown &middot; tap the button again to close</span></div>
+      <div class="units">
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 Woodland</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-storm"></span>Storm Cloud</div>
+        <div class="u-equip"><b>Options:</b> Moonroof Package (MR) &middot; Mudguards (MF)</div>
+        <div class="u-priceline">
+          <div class="u-price">$42,505<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      </div>
     </div>
-    </div>
-    <div class="tpanel" data-panel="wdl" role="tabpanel" hidden>
-    <div class="tempty">
-      <div class="big">Every incoming RAV4 Woodland is currently reserved.</div>
-      <p>Nothing on the Woodland is open right now, but factory allocations arrive every two weeks. Send me the color and packages you want and I&rsquo;ll match you against the next allocation — <a href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27m%20interested%20in%20a%202026%20RAV4%20Woodland.%20Can%20you%20match%20me%20against%20the%20next%20allocation%3F">text Josh</a> or call <a href="tel:3196311461">319-631-1461</a>.</p>
-    </div>
-    </div>
-    <div class="tpanel" data-panel="se" role="tabpanel" hidden>
-    <div class="units">
-      <div class="unit" data-trim="se">
+    <div class="gpanel" id="gp-se-hev" data-g="se-hev" role="tabpanel" hidden>
+      <div class="gpanel-head"><span class="gh-name">RAV4 SE <em class="hev">Hybrid</em></span><span class="gh-sub">7 available &middot; 11 reserved &middot; MSRP shown &middot; tap the button again to close</span></div>
+      <div class="units">
+      <div class="unit">
         <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
         <div class="u-trim">RAV4 SE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
@@ -420,7 +723,7 @@ const SHEET_LIVE = true;
           <a class="u-learn jump" href="#trim-se" data-pt="hevawd">What the SE includes &darr;</a>
         </div>
       </div>
-      <div class="unit" data-trim="se">
+      <div class="unit">
         <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
         <div class="u-trim">RAV4 SE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
@@ -435,7 +738,7 @@ const SHEET_LIVE = true;
           <a class="u-learn jump" href="#trim-se" data-pt="hevawd">What the SE includes &darr;</a>
         </div>
       </div>
-      <div class="unit" data-trim="se">
+      <div class="unit">
         <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
         <div class="u-trim">RAV4 SE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
@@ -450,7 +753,7 @@ const SHEET_LIVE = true;
           <a class="u-learn jump" href="#trim-se" data-pt="hevawd">What the SE includes &darr;</a>
         </div>
       </div>
-      <div class="unit" data-trim="se">
+      <div class="unit">
         <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
         <div class="u-trim">RAV4 SE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
@@ -465,7 +768,7 @@ const SHEET_LIVE = true;
           <a class="u-learn jump" href="#trim-se" data-pt="hevawd">What the SE includes &darr;</a>
         </div>
       </div>
-      <div class="unit" data-trim="se">
+      <div class="unit">
         <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
         <div class="u-trim">RAV4 SE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
@@ -480,7 +783,7 @@ const SHEET_LIVE = true;
           <a class="u-learn jump" href="#trim-se" data-pt="hevawd">What the SE includes &darr;</a>
         </div>
       </div>
-      <div class="unit" data-trim="se">
+      <div class="unit">
         <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
         <div class="u-trim">RAV4 SE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
@@ -495,7 +798,7 @@ const SHEET_LIVE = true;
           <a class="u-learn jump" href="#trim-se" data-pt="hevawd">What the SE includes &darr;</a>
         </div>
       </div>
-      <div class="unit" data-trim="se">
+      <div class="unit">
         <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
         <div class="u-trim">RAV4 SE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
@@ -510,11 +813,133 @@ const SHEET_LIVE = true;
           <a class="u-learn jump" href="#trim-se" data-pt="hevawd">What the SE includes &darr;</a>
         </div>
       </div>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 SE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-blueprint"></span>Blueprint &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> No factory packages or accessories</div>
+        <div class="u-priceline">
+          <div class="u-price">$37,695<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 SE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-storm"></span>Storm Cloud &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; All-Weather Liner Package (2T)</div>
+        <div class="u-priceline">
+          <div class="u-price">$38,409<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">On the Lot</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 SE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-meteor"></span>Meteor Shower &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T)</div>
+        <div class="u-priceline">
+          <div class="u-price">$38,809<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">On the Lot</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 SE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-icecap"></span>Ice Cap &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; Mudguards (MF) &middot; Additional accessories (63)</div>
+        <div class="u-priceline">
+          <div class="u-price">$38,829<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 SE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-icecap"></span>Ice Cap &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Mudguards (MF)</div>
+        <div class="u-priceline">
+          <div class="u-price">$38,969<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">In Transit</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 SE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-storm"></span>Storm Cloud &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Door Edge Guards (D5)</div>
+        <div class="u-priceline">
+          <div class="u-price">$38,974<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 SE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-storm"></span>Storm Cloud &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Door Edge Guards (D5)</div>
+        <div class="u-priceline">
+          <div class="u-price">$38,974<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 SE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-meteor"></span>Meteor Shower &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5)</div>
+        <div class="u-priceline">
+          <div class="u-price">$39,234<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 SE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-blueprint"></span>Blueprint &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; Moonroof Package (MR) &middot; All-Weather Liner Package (2T)</div>
+        <div class="u-priceline">
+          <div class="u-price">$39,659<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">On the Lot</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 SE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-blueprint"></span>Blueprint &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; Moonroof Package (MR) &middot; Additional accessories (63 R5)</div>
+        <div class="u-priceline">
+          <div class="u-price">$39,659<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 SE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-storm"></span>Storm Cloud &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; Moonroof Package (MR) &middot; All-Weather Liner Package (2T) &middot; Mudguards (MF)</div>
+        <div class="u-priceline">
+          <div class="u-price">$39,819<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      </div>
     </div>
-    </div>
-    <div class="tpanel" data-panel="xse" role="tabpanel" hidden>
-    <div class="units">
-      <div class="unit" data-trim="xse">
+    <div class="gpanel" id="gp-xse-hev" data-g="xse-hev" role="tabpanel" hidden>
+      <div class="gpanel-head"><span class="gh-name">RAV4 XSE <em class="hev">Hybrid</em></span><span class="gh-sub">7 available &middot; 3 reserved &middot; MSRP shown &middot; tap the button again to close</span></div>
+      <div class="units">
+      <div class="unit">
         <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
         <div class="u-trim">RAV4 XSE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
@@ -529,7 +954,7 @@ const SHEET_LIVE = true;
           <a class="u-learn jump" href="#trim-xse" data-pt="hevawd">What the XSE includes &darr;</a>
         </div>
       </div>
-      <div class="unit" data-trim="xse">
+      <div class="unit">
         <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
         <div class="u-trim">RAV4 XSE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
@@ -544,7 +969,7 @@ const SHEET_LIVE = true;
           <a class="u-learn jump" href="#trim-xse" data-pt="hevawd">What the XSE includes &darr;</a>
         </div>
       </div>
-      <div class="unit" data-trim="xse">
+      <div class="unit">
         <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
         <div class="u-trim">RAV4 XSE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
@@ -559,7 +984,7 @@ const SHEET_LIVE = true;
           <a class="u-learn jump" href="#trim-xse" data-pt="hevawd">What the XSE includes &darr;</a>
         </div>
       </div>
-      <div class="unit" data-trim="xse">
+      <div class="unit">
         <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
         <div class="u-trim">RAV4 XSE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
@@ -574,7 +999,7 @@ const SHEET_LIVE = true;
           <a class="u-learn jump" href="#trim-xse" data-pt="hevawd">What the XSE includes &darr;</a>
         </div>
       </div>
-      <div class="unit" data-trim="xse">
+      <div class="unit">
         <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
         <div class="u-trim">RAV4 XSE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
@@ -589,7 +1014,7 @@ const SHEET_LIVE = true;
           <a class="u-learn jump" href="#trim-xse" data-pt="hevawd">What the XSE includes &darr;</a>
         </div>
       </div>
-      <div class="unit" data-trim="xse">
+      <div class="unit">
         <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
         <div class="u-trim">RAV4 XSE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
@@ -604,7 +1029,7 @@ const SHEET_LIVE = true;
           <a class="u-learn jump" href="#trim-xse" data-pt="hevawd">What the XSE includes &darr;</a>
         </div>
       </div>
-      <div class="unit" data-trim="xse">
+      <div class="unit">
         <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
         <div class="u-trim">RAV4 XSE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
@@ -619,7 +1044,110 @@ const SHEET_LIVE = true;
           <a class="u-learn jump" href="#trim-xse" data-pt="hevawd">What the XSE includes &darr;</a>
         </div>
       </div>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 XSE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-black"></span>Midnight Black Metallic &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; JBL Premium Audio Package (EJ) &middot; All-Weather Liner Package (2T)</div>
+        <div class="u-priceline">
+          <div class="u-price">$44,229<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 XSE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-black"></span>Midnight Black Metallic &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; JBL Premium Audio Package (EJ) &middot; All-Weather Liner Package (2T)</div>
+        <div class="u-priceline">
+          <div class="u-price">$44,229<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">On the Lot</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 XSE</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-black"></span>Midnight Black Metallic &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; Driver Assist Package (DA) &middot; JBL Premium Audio Package (EJ) &middot; Panoramic Moonroof Package (SR) &middot; All-Weather Liner Package (2T) &middot; Mudguards (MF)</div>
+        <div class="u-priceline">
+          <div class="u-price">$45,509<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      </div>
     </div>
+    <div class="gpanel" id="gp-wdl-phv" data-g="wdl-phv" role="tabpanel" hidden>
+      <div class="gpanel-head"><span class="gh-name">RAV4 Woodland <em class="phv">Plug-in Hybrid</em></span><span class="gh-sub">All 1 reserved &middot; MSRP shown &middot; tap the button again to close</span></div>
+      <div class="units">
+      <div class="unit sold phv">
+        <span class="u-status">In Transit</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 Plug-in Hybrid Woodland</div>
+        <div class="u-pt phv">Plug-in Hybrid AWD &middot; 324 hp &middot; 49-mile EV range<sup>1</sup></div>
+        <div class="u-color"><span class="swatch sw-black"></span>Midnight Black Metallic</div>
+        <div class="u-equip"><b>Options:</b> No factory packages or accessories</div>
+        <div class="u-priceline">
+          <div class="u-price">$46,895<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="gpanel" id="gp-se-phv" data-g="se-phv" role="tabpanel" hidden>
+      <div class="gpanel-head"><span class="gh-name">RAV4 SE <em class="phv">Plug-in Hybrid</em></span><span class="gh-sub">All 2 reserved &middot; MSRP shown &middot; tap the button again to close</span></div>
+      <div class="units">
+      <div class="unit sold phv">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 Plug-in Hybrid SE</div>
+        <div class="u-pt phv">Plug-in Hybrid AWD &middot; 324 hp &middot; 52-mile EV range<sup>1</sup></div>
+        <div class="u-color"><span class="swatch sw-icecap"></span>Ice Cap &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF)</div>
+        <div class="u-priceline">
+          <div class="u-price">$44,794<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold phv">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 Plug-in Hybrid SE</div>
+        <div class="u-pt phv">Plug-in Hybrid AWD &middot; 324 hp &middot; 52-mile EV range<sup>1</sup></div>
+        <div class="u-color"><span class="swatch sw-storm"></span>Storm Cloud &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; Moonroof Package (MR) &middot; All-Weather Liner Package (2T)</div>
+        <div class="u-priceline">
+          <div class="u-price">$45,059<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="gpanel" id="gp-xse-phv" data-g="xse-phv" role="tabpanel" hidden>
+      <div class="gpanel-head"><span class="gh-name">RAV4 XSE <em class="phv">Plug-in Hybrid</em></span><span class="gh-sub">All 2 reserved &middot; MSRP shown &middot; tap the button again to close</span></div>
+      <div class="units">
+      <div class="unit sold phv">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 Plug-in Hybrid XSE</div>
+        <div class="u-pt phv">Plug-in Hybrid AWD &middot; 324 hp &middot; 52-mile EV range<sup>1</sup></div>
+        <div class="u-color"><span class="swatch sw-unknown"></span>Exterior code 2SQ &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; JBL Premium Audio Package (EJ) &middot; All-Weather Liner Package (2T) &middot; Blackout Emblem Overlays (3J) &middot; Door Edge Guards (D5) &middot; Door Sill Protectors (D9) &middot; Mudguards (MF) &middot; Additional accessories (TX)</div>
+        <div class="u-priceline">
+          <div class="u-price">$51,218<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold phv">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 Plug-in Hybrid XSE</div>
+        <div class="u-pt phv">Plug-in Hybrid AWD &middot; 324 hp &middot; 52-mile EV range<sup>1</sup></div>
+        <div class="u-color"><span class="swatch sw-unknown"></span>Exterior code M22 &middot; Black interior</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; Driver Assist Package (DA) &middot; JBL Premium Audio Package (EJ) &middot; Panoramic Moonroof Package (SR) &middot; All-Weather Liner Package (2T) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (TX 8J E7 EG)</div>
+        <div class="u-priceline">
+          <div class="u-price">$54,739<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      </div>
     </div>
 
     <div class="how">
@@ -1095,23 +1623,26 @@ const SHEET_LIVE = true;
     });
   });
 
-  /* ---------- Trim tabs (available units) ---------- */
-  var ttabs = document.querySelectorAll(".ttab");
-  var tpanels = document.querySelectorAll(".tpanel");
-  function showTab(key){
-    ttabs.forEach(function(b){ b.setAttribute("aria-selected", b.dataset.tab === key ? "true" : "false"); });
-    tpanels.forEach(function(p){ p.hidden = p.dataset.panel !== key; });
+  /* ---------- Grade buttons (inventory behind each) ---------- */
+  var gbtns = document.querySelectorAll(".gbtn");
+  var gpanels = document.querySelectorAll(".gpanel");
+  function showGrade(key){
+    gbtns.forEach(function(b){ b.setAttribute("aria-selected", b.dataset.g === key ? "true" : "false"); });
+    gpanels.forEach(function(p){ p.hidden = p.dataset.g !== key; });
   }
-  if (ttabs.length) {
-    /* recount from the cards so the numbers can never drift from what's listed */
-    ttabs.forEach(function(b){
-      var n = document.querySelectorAll('.tpanel[data-panel="' + b.dataset.tab + '"] .unit').length;
-      b.querySelector(".tc").textContent = n;
-      b.classList.toggle("none", n === 0);
-      b.addEventListener("click", function(){ showTab(b.dataset.tab); });
+  gbtns.forEach(function(b){
+    b.addEventListener("click", function(){
+      var already = b.getAttribute("aria-selected") === "true";
+      showGrade(already ? null : b.dataset.g);
+      if (!already) {
+        var panel = document.getElementById("gp-" + b.dataset.g);
+        if (panel && window.innerWidth < 820) panel.scrollIntoView({behavior:"smooth", block:"start"});
+      }
     });
-    var first = Array.prototype.filter.call(ttabs, function(b){ return !b.classList.contains("none"); })[0] || ttabs[0];
-    showTab(first.dataset.tab);
+  });
+  if (gbtns.length) {
+    var firstOpen = document.querySelector(".gbtn.open") || gbtns[0];
+    showGrade(firstOpen.dataset.g);
   }
 
   /* ---------- Availability master switch ---------- */
