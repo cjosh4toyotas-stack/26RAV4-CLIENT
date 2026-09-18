@@ -182,10 +182,10 @@ const SHEET_LIVE = true;
   .safety-card p{font-size:13px;color:var(--gray);}
 
   /* Feature matrix */
-  .tbl-scroll{overflow-x:auto;border:1px solid rgba(255,255,255,.10);background:linear-gradient(180deg,rgba(21,24,34,.62) 0%,rgba(12,14,21,.62) 100%);}
+  .tbl-scroll{overflow:auto;max-height:80vh;border:1px solid rgba(255,255,255,.10);background:linear-gradient(180deg,rgba(21,24,34,.62) 0%,rgba(12,14,21,.62) 100%);}
   table.cmp{border-collapse:collapse;width:100%;min-width:920px;font-size:13px;}
   .cmp th,.cmp td{padding:10px 12px;border-bottom:1px solid rgba(255,255,255,.055);text-align:center;color:var(--text);}
-  .cmp th{background:#000;color:#fff;font-size:12px;text-transform:uppercase;letter-spacing:.08em;position:sticky;top:0;border-bottom:2px solid var(--bz-bot);}
+  .cmp th{background:#000;color:#fff;font-size:12px;text-transform:uppercase;letter-spacing:.08em;position:sticky;top:0;z-index:6;border-bottom:2px solid var(--bz-bot);}
   .cmp th:not(:first-child){background:linear-gradient(180deg,var(--bz-top) 0%,var(--bz-mid) 55%,var(--bz-bot) 100%);border-left:1px solid #0A2A48;}
   .cmp td:first-child,.cmp th:first-child{text-align:left;font-weight:bold;color:var(--head);background:rgba(4,7,13,.66);}
   .cmp th:first-child{background:#000;}
@@ -403,11 +403,11 @@ const SHEET_LIVE = true;
         <span class="gprice">$35,234<i>MSRP</i></span>
         <span class="gfoot"><span class="gstat">All 4 reserved</span><span class="gmore">Tap to view units</span></span>
       </button>
-      <button class="gbtn hev open" role="tab" data-g="xlep-hev" aria-selected="false" aria-controls="gp-xlep-hev">
+            <button class="gbtn hev open" role="tab" data-g="xlep-hev" aria-selected="false" aria-controls="gp-xlep-hev">
         <span class="gname">RAV4 XLE Premium</span>
         <span class="gpt">Hybrid &middot; 13 in pipeline</span>
         <span class="gprice">$39,754&ndash;$44,649<i>MSRP</i></span>
-        <span class="gfoot"><span class="gstat">3 available &middot; 10 reserved</span><span class="gmore">Tap to view units</span></span>
+        <span class="gfoot"><span class="gstat">2 available &middot; 11 reserved</span><span class="gmore">Tap to view units</span></span>
       </button>
       <button class="gbtn hev res" role="tab" data-g="ltd-hev" aria-selected="false" aria-controls="gp-ltd-hev">
         <span class="gname">RAV4 Limited</span>
@@ -415,11 +415,11 @@ const SHEET_LIVE = true;
         <span class="gprice">$45,834&ndash;$47,409<i>MSRP</i></span>
         <span class="gfoot"><span class="gstat">All 7 reserved</span><span class="gmore">Tap to view units</span></span>
       </button>
-      <button class="gbtn hev open" role="tab" data-g="wdl-hev" aria-selected="false" aria-controls="gp-wdl-hev">
+            <button class="gbtn hev res" role="tab" data-g="wdl-hev" aria-selected="false" aria-controls="gp-wdl-hev">
         <span class="gname">RAV4 Woodland</span>
         <span class="gpt">Hybrid &middot; 4 in pipeline</span>
         <span class="gprice">$41,655&ndash;$43,455<i>MSRP</i></span>
-        <span class="gfoot"><span class="gstat">3 available &middot; 1 reserved</span><span class="gmore">Tap to view units</span></span>
+        <span class="gfoot"><span class="gstat">All 4 reserved</span><span class="gmore">Tap to view units</span></span>
       </button>
       <button class="gbtn hev open" role="tab" data-g="se-hev" aria-selected="false" aria-controls="gp-se-hev">
         <span class="gname">RAV4 SE</span>
@@ -505,20 +505,20 @@ const SHEET_LIVE = true;
       </div>
     </div>
     <div class="gpanel" id="gp-xlep-hev" data-g="xlep-hev" role="tabpanel" hidden>
-      <div class="gpanel-head"><span class="gh-name">RAV4 XLE Premium <em class="hev">Hybrid</em></span><span class="gh-sub">3 available &middot; 10 reserved &middot; MSRP shown &middot; tap the button again to close</span></div>
+      <div class="gpanel-head"><span class="gh-name">RAV4 XLE Premium <em class="hev">Hybrid</em></span><span class="gh-sub">2 available &middot; 11 reserved &middot; MSRP shown &middot; tap the button again to close</span></div>
       <div class="units">
       <div class="unit">
         <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
         <div class="u-trim">RAV4 XLE Premium</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
-        <div class="u-color"><span class="swatch sw-windchill"></span>Wind Chill Pearl &middot; Interior EE10</div>
-        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; Driver Assist Package (DA) &middot; Premium Paint (PC) &middot; Panoramic Moonroof Package (SR) &middot; All-Weather Liner Package (2T) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (EG)</div>
+        <div class="u-color"><span class="swatch sw-ruby"></span>Ruby Flare Pearl &middot; Interior EE10</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; Premium Paint (PC) &middot; Blackout Emblem Overlays (3J) &middot; Rear Cargo Lamps (43) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Illuminated Front Badge (6L) &middot; Rear Bumper Protector (EG) &middot; Illuminated Cargo Sills (K2)</div>
         <div class="u-priceline">
-          <div class="u-price">$44,649<span>MSRP</span></div>
-          <div class="u-ids">Temp. VIN 4T36CRAV7TU41P874</div>
+          <div class="u-price">$41,929<span>MSRP</span></div>
+          <div class="u-ids">Temp. VIN 4T36CRAV6TU43P937</div>
         </div>
         <div class="u-actions">
-          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20XLE%20Premium%20Hybrid%20in%20Wind%20Chill%20Pearl%20at%20%2444%2C649%20MSRP%20%28Temp.%20VIN%204T36CRAV7TU41P874%29.%20Is%20it%20still%20open%3F">Reserve &mdash; Text Josh</a>
+          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20XLE%20Premium%20Hybrid%20in%20Ruby%20Flare%20Pearl%20at%20%2441%2C929%20MSRP%20%28Temp.%20VIN%204T36CRAV6TU43P937%29.%20Is%20it%20still%20open%3F">Reserve &mdash; Text Josh</a>
           <a class="u-learn jump" href="#trim-xlep" data-pt="hevawd">What the XLE Premium includes &darr;</a>
         </div>
       </div>
@@ -526,29 +526,14 @@ const SHEET_LIVE = true;
         <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
         <div class="u-trim">RAV4 XLE Premium</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
-        <div class="u-color"><span class="swatch sw-storm"></span>Storm Cloud &middot; Interior EE10</div>
-        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; Driver Assist Package (DA) &middot; Panoramic Moonroof Package (SR) &middot; Blackout Emblem Overlays (3J) &middot; Rear Cargo Lamps (43) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (6L EG K2)</div>
+        <div class="u-color"><span class="swatch sw-black"></span>Midnight Black Metallic &middot; Interior EE20</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; Driver Assist Package (DA) &middot; Panoramic Moonroof Package (SR) &middot; Blackout Emblem Overlays (3J) &middot; Rear Cargo Lamps (43) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Illuminated Front Badge (6L) &middot; Rear Bumper Protector (EG) &middot; Illuminated Cargo Sills (K2)</div>
         <div class="u-priceline">
           <div class="u-price">$43,954<span>MSRP</span></div>
-          <div class="u-ids">Temp. VIN 2T36CRAV3TW42J565</div>
+          <div class="u-ids">Temp. VIN 4T36CRAV0TU43P724</div>
         </div>
         <div class="u-actions">
-          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20XLE%20Premium%20Hybrid%20in%20Storm%20Cloud%20at%20%2443%2C954%20MSRP%20%28Temp.%20VIN%202T36CRAV3TW42J565%29.%20Is%20it%20still%20open%3F">Reserve &mdash; Text Josh</a>
-          <a class="u-learn jump" href="#trim-xlep" data-pt="hevawd">What the XLE Premium includes &darr;</a>
-        </div>
-      </div>
-      <div class="unit">
-        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
-        <div class="u-trim">RAV4 XLE Premium</div>
-        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
-        <div class="u-color"><span class="swatch sw-storm"></span>Storm Cloud &middot; Interior EE40</div>
-        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; Driver Assist Package (DA) &middot; Panoramic Moonroof Package (SR) &middot; Blackout Emblem Overlays (3J) &middot; Rear Cargo Lamps (43) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (6L EG K2)</div>
-        <div class="u-priceline">
-          <div class="u-price">$43,954<span>MSRP</span></div>
-          <div class="u-ids">Temp. VIN 2T36CRAV6TW41G512</div>
-        </div>
-        <div class="u-actions">
-          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20XLE%20Premium%20Hybrid%20in%20Storm%20Cloud%20at%20%2443%2C954%20MSRP%20%28Temp.%20VIN%202T36CRAV6TW41G512%29.%20Is%20it%20still%20open%3F">Reserve &mdash; Text Josh</a>
+          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20XLE%20Premium%20Hybrid%20in%20Midnight%20Black%20Metallic%20at%20%2443%2C954%20MSRP%20%28Temp.%20VIN%204T36CRAV0TU43P724%29.%20Is%20it%20still%20open%3F">Reserve &mdash; Text Josh</a>
           <a class="u-learn jump" href="#trim-xlep" data-pt="hevawd">What the XLE Premium includes &darr;</a>
         </div>
       </div>
@@ -578,21 +563,10 @@ const SHEET_LIVE = true;
         <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
         <div class="u-trim">RAV4 XLE Premium</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
-        <div class="u-color"><span class="swatch sw-windchill"></span>Wind Chill Pearl</div>
-        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; Premium Paint (PC) &middot; Panoramic Moonroof Package (SR) &middot; All-Weather Liner Package (2T) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (EG)</div>
+        <div class="u-color"><span class="swatch sw-meteor"></span>Meteor Shower</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; All-Weather Liner Package (2T)</div>
         <div class="u-priceline">
-          <div class="u-price">$43,999<span>MSRP</span></div>
-          <div class="u-ids">Reserved by another customer</div>
-        </div>
-      </div>
-      <div class="unit sold">
-        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
-        <div class="u-trim">RAV4 XLE Premium</div>
-        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
-        <div class="u-color"><span class="swatch sw-black"></span>Midnight Black Metallic</div>
-        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; Driver Assist Package (DA) &middot; Panoramic Moonroof Package (SR) &middot; Blackout Emblem Overlays (3J) &middot; Rear Cargo Lamps (43) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (6L EG K2)</div>
-        <div class="u-priceline">
-          <div class="u-price">$43,954<span>MSRP</span></div>
+          <div class="u-price">$39,809<span>MSRP</span></div>
           <div class="u-ids">Reserved by another customer</div>
         </div>
       </div>
@@ -611,21 +585,10 @@ const SHEET_LIVE = true;
         <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
         <div class="u-trim">RAV4 XLE Premium</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
-        <div class="u-color"><span class="swatch sw-ruby"></span>Ruby Flare Pearl</div>
-        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; Premium Paint (PC) &middot; Blackout Emblem Overlays (3J) &middot; Rear Cargo Lamps (43) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (6L EG K2)</div>
+        <div class="u-color"><span class="swatch sw-blueprint"></span>Blueprint</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Door Edge Guards (D5) &middot; Mudguards (MF)</div>
         <div class="u-priceline">
-          <div class="u-price">$41,929<span>MSRP</span></div>
-          <div class="u-ids">Reserved by another customer</div>
-        </div>
-      </div>
-      <div class="unit sold">
-        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
-        <div class="u-trim">RAV4 XLE Premium</div>
-        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
-        <div class="u-color"><span class="swatch sw-ruby"></span>Ruby Flare Pearl</div>
-        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; Driver Assist Package (DA) &middot; Premium Paint (PC) &middot; Panoramic Moonroof Package (SR) &middot; All-Weather Liner Package (2T)</div>
-        <div class="u-priceline">
-          <div class="u-price">$42,784<span>MSRP</span></div>
+          <div class="u-price">$40,134<span>MSRP</span></div>
           <div class="u-ids">Reserved by another customer</div>
         </div>
       </div>
@@ -644,10 +607,10 @@ const SHEET_LIVE = true;
         <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
         <div class="u-trim">RAV4 XLE Premium</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
-        <div class="u-color"><span class="swatch sw-meteor"></span>Meteor Shower</div>
-        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; All-Weather Liner Package (2T)</div>
+        <div class="u-color"><span class="swatch sw-ruby"></span>Ruby Flare Pearl</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; Driver Assist Package (DA) &middot; Premium Paint (PC) &middot; Panoramic Moonroof Package (SR) &middot; All-Weather Liner Package (2T)</div>
         <div class="u-priceline">
-          <div class="u-price">$39,809<span>MSRP</span></div>
+          <div class="u-price">$42,784<span>MSRP</span></div>
           <div class="u-ids">Reserved by another customer</div>
         </div>
       </div>
@@ -655,10 +618,43 @@ const SHEET_LIVE = true;
         <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
         <div class="u-trim">RAV4 XLE Premium</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
-        <div class="u-color"><span class="swatch sw-blueprint"></span>Blueprint</div>
-        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Door Edge Guards (D5) &middot; Mudguards (MF)</div>
+        <div class="u-color"><span class="swatch sw-storm"></span>Storm Cloud</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; Driver Assist Package (DA) &middot; Panoramic Moonroof Package (SR) &middot; Blackout Emblem Overlays (3J) &middot; Rear Cargo Lamps (43) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Illuminated Front Badge (6L) &middot; Rear Bumper Protector (EG) &middot; Illuminated Cargo Sills (K2)</div>
         <div class="u-priceline">
-          <div class="u-price">$40,134<span>MSRP</span></div>
+          <div class="u-price">$43,954<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 XLE Premium</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-storm"></span>Storm Cloud</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; Driver Assist Package (DA) &middot; Panoramic Moonroof Package (SR) &middot; Blackout Emblem Overlays (3J) &middot; Rear Cargo Lamps (43) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Illuminated Front Badge (6L) &middot; Rear Bumper Protector (EG) &middot; Illuminated Cargo Sills (K2)</div>
+        <div class="u-priceline">
+          <div class="u-price">$43,954<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 XLE Premium</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-windchill"></span>Wind Chill Pearl</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; Premium Paint (PC) &middot; Panoramic Moonroof Package (SR) &middot; All-Weather Liner Package (2T) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Rear Bumper Protector (EG)</div>
+        <div class="u-priceline">
+          <div class="u-price">$43,999<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 XLE Premium</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-windchill"></span>Wind Chill Pearl</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; Driver Assist Package (DA) &middot; Premium Paint (PC) &middot; Panoramic Moonroof Package (SR) &middot; All-Weather Liner Package (2T) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Rear Bumper Protector (EG)</div>
+        <div class="u-priceline">
+          <div class="u-price">$44,649<span>MSRP</span></div>
           <div class="u-ids">Reserved by another customer</div>
         </div>
       </div>
@@ -747,51 +743,17 @@ const SHEET_LIVE = true;
       </div>
     </div>
     <div class="gpanel" id="gp-wdl-hev" data-g="wdl-hev" role="tabpanel" hidden>
-      <div class="gpanel-head"><span class="gh-name">RAV4 Woodland <em class="hev">Hybrid</em></span><span class="gh-sub">3 available &middot; 1 reserved &middot; MSRP shown &middot; tap the button again to close</span></div>
+      <div class="gpanel-head"><span class="gh-name">RAV4 Woodland <em class="hev">Hybrid</em></span><span class="gh-sub">All 4 reserved &middot; MSRP shown &middot; tap the button again to close</span></div>
       <div class="units">
-      <div class="unit">
-        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
         <div class="u-trim">RAV4 Woodland</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
-        <div class="u-color"><span class="swatch sw-storm"></span>Storm Cloud &middot; Interior EB20</div>
-        <div class="u-equip"><b>Options:</b> Blackout Emblem Overlays (3J) &middot; Rear Cargo Lamps (43) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (6L EG K2)</div>
-        <div class="u-priceline">
-          <div class="u-price">$43,455<span>MSRP</span></div>
-          <div class="u-ids">Temp. VIN 2T36CRAV4TW42G889</div>
-        </div>
-        <div class="u-actions">
-          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20Woodland%20Hybrid%20in%20Storm%20Cloud%20at%20%2443%2C455%20MSRP%20%28Temp.%20VIN%202T36CRAV4TW42G889%29.%20Is%20it%20still%20open%3F">Reserve &mdash; Text Josh</a>
-          <a class="u-learn jump" href="#trim-wdl" data-pt="hevawd">What the Woodland includes &darr;</a>
-        </div>
-      </div>
-      <div class="unit">
-        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
-        <div class="u-trim">RAV4 Woodland</div>
-        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
-        <div class="u-color"><span class="swatch sw-storm"></span>Storm Cloud &middot; Mineral interior</div>
-        <div class="u-equip"><b>Options:</b> Blackout Emblem Overlays (3J) &middot; Rear Cargo Lamps (43) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (6L EG K2)</div>
-        <div class="u-priceline">
-          <div class="u-price">$43,455<span>MSRP</span></div>
-          <div class="u-ids">Temp. VIN 2T36CRAV8TW42E367</div>
-        </div>
-        <div class="u-actions">
-          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20Woodland%20Hybrid%20in%20Storm%20Cloud%20at%20%2443%2C455%20MSRP%20%28Temp.%20VIN%202T36CRAV8TW42E367%29.%20Is%20it%20still%20open%3F">Reserve &mdash; Text Josh</a>
-          <a class="u-learn jump" href="#trim-wdl" data-pt="hevawd">What the Woodland includes &darr;</a>
-        </div>
-      </div>
-      <div class="unit">
-        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="avail-badge">AVAILABLE</span>
-        <div class="u-trim">RAV4 Woodland</div>
-        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
-        <div class="u-color"><span class="swatch sw-urbanrock"></span>Urban Rock &middot; Interior EB20</div>
+        <div class="u-color"><span class="swatch sw-urbanrock"></span>Urban Rock</div>
         <div class="u-equip"><b>Options:</b> Mudguards (MF)</div>
         <div class="u-priceline">
           <div class="u-price">$41,655<span>MSRP</span></div>
-          <div class="u-ids">Temp. VIN 2T36CRAV3TW42I973</div>
-        </div>
-        <div class="u-actions">
-          <a class="u-reserve" href="sms:3196311461?&amp;body=Hi%20Josh%2C%20I%27d%20like%20to%20reserve%20the%202026%20RAV4%20Woodland%20Hybrid%20in%20Urban%20Rock%20at%20%2441%2C655%20MSRP%20%28Temp.%20VIN%202T36CRAV3TW42I973%29.%20Is%20it%20still%20open%3F">Reserve &mdash; Text Josh</a>
-          <a class="u-learn jump" href="#trim-wdl" data-pt="hevawd">What the Woodland includes &darr;</a>
+          <div class="u-ids">Reserved by another customer</div>
         </div>
       </div>
       <div class="unit sold">
@@ -802,6 +764,28 @@ const SHEET_LIVE = true;
         <div class="u-equip"><b>Options:</b> Moonroof Package (MR) &middot; Mudguards (MF)</div>
         <div class="u-priceline">
           <div class="u-price">$42,505<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 Woodland</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-storm"></span>Storm Cloud</div>
+        <div class="u-equip"><b>Options:</b> Blackout Emblem Overlays (3J) &middot; Rear Cargo Lamps (43) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Illuminated Front Badge (6L) &middot; Rear Bumper Protector (EG) &middot; Illuminated Cargo Sills (K2)</div>
+        <div class="u-priceline">
+          <div class="u-price">$43,455<span>MSRP</span></div>
+          <div class="u-ids">Reserved by another customer</div>
+        </div>
+      </div>
+      <div class="unit sold">
+        <span class="u-status">Factory Allocated &middot; Scheduled for Production</span><span class="sold-badge">RESERVED</span>
+        <div class="u-trim">RAV4 Woodland</div>
+        <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
+        <div class="u-color"><span class="swatch sw-storm"></span>Storm Cloud &middot; Mineral interior</div>
+        <div class="u-equip"><b>Options:</b> Blackout Emblem Overlays (3J) &middot; Rear Cargo Lamps (43) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Illuminated Front Badge (6L) &middot; Rear Bumper Protector (EG) &middot; Illuminated Cargo Sills (K2)</div>
+        <div class="u-priceline">
+          <div class="u-price">$43,455<span>MSRP</span></div>
           <div class="u-ids">Reserved by another customer</div>
         </div>
       </div>
@@ -830,7 +814,7 @@ const SHEET_LIVE = true;
         <div class="u-trim">RAV4 SE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
         <div class="u-color"><span class="swatch sw-icecap"></span>Ice Cap &middot; Black interior</div>
-        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Paint Protection Film (3P) &middot; Low Profile Cross Bars (3T) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (87 EG)</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Paint Protection Film (3P) &middot; Low Profile Cross Bars (3T) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Rear Bumper Protector (EG) &middot; Additional accessories (87)</div>
         <div class="u-priceline">
           <div class="u-price">$40,388<span>MSRP</span></div>
           <div class="u-ids">Temp. VIN 4T36CRAVXTU42P749</div>
@@ -845,7 +829,7 @@ const SHEET_LIVE = true;
         <div class="u-trim">RAV4 SE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
         <div class="u-color"><span class="swatch sw-blueprint"></span>Blueprint &middot; Black interior</div>
-        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (6L EG G4)</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Illuminated Front Badge (6L) &middot; Rear Bumper Protector (EG) &middot; Additional accessories (G4)</div>
         <div class="u-priceline">
           <div class="u-price">$40,674<span>MSRP</span></div>
           <div class="u-ids">Temp. VIN 4T36CRAVXTU42Q089</div>
@@ -905,7 +889,7 @@ const SHEET_LIVE = true;
         <div class="u-trim">RAV4 SE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
         <div class="u-color"><span class="swatch sw-icecap"></span>Ice Cap &middot; Black interior</div>
-        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; Moonroof Package (MR) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (6L EG G4)</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; Moonroof Package (MR) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Illuminated Front Badge (6L) &middot; Rear Bumper Protector (EG) &middot; Additional accessories (G4)</div>
         <div class="u-priceline">
           <div class="u-price">$41,524<span>MSRP</span></div>
           <div class="u-ids">Temp. VIN 4T36CRAV4TU43Q066</div>
@@ -1007,7 +991,7 @@ const SHEET_LIVE = true;
         <div class="u-trim">RAV4 SE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
         <div class="u-color"><span class="swatch sw-blueprint"></span>Blueprint &middot; Black interior</div>
-        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (6L EG G4)</div>
+        <div class="u-equip"><b>Options:</b> Convenience Package (CP) &middot; Weather Package (CY) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Illuminated Front Badge (6L) &middot; Rear Bumper Protector (EG) &middot; Additional accessories (G4)</div>
         <div class="u-priceline">
           <div class="u-price">$40,674<span>MSRP</span></div>
           <div class="u-ids">Reserved by another customer</div>
@@ -1090,7 +1074,7 @@ const SHEET_LIVE = true;
         <div class="u-trim">RAV4 XSE</div>
         <div class="u-pt hev">Hybrid AWD &middot; 236 hp</div>
         <div class="u-color"><span class="swatch sw-black"></span>Midnight Black Metallic &middot; Black interior</div>
-        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; JBL Premium Audio Package (EJ) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (6L EG G4)</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; JBL Premium Audio Package (EJ) &middot; All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Illuminated Front Badge (6L) &middot; Rear Bumper Protector (EG) &middot; Additional accessories (G4)</div>
         <div class="u-priceline">
           <div class="u-price">$46,094<span>MSRP</span></div>
           <div class="u-ids">Temp. VIN 4T36CRAV8TU43P129</div>
@@ -1221,7 +1205,7 @@ const SHEET_LIVE = true;
         <div class="u-trim">RAV4 Plug-in Hybrid SE</div>
         <div class="u-pt phv">Plug-in Hybrid AWD &middot; 324 hp &middot; 52-mile EV range<sup>1</sup></div>
         <div class="u-color"><span class="swatch sw-meteor"></span>Meteor Shower &middot; Black interior</div>
-        <div class="u-equip"><b>Options:</b> All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Body Side Moldings (BM) &middot; Mudguards (MF) &middot; Additional accessories (6L G4)</div>
+        <div class="u-equip"><b>Options:</b> All-Weather Liner Package (2T) &middot; Rear Cargo Lamps (43) &middot; Body Side Moldings (BM) &middot; Mudguards (MF) &middot; Illuminated Front Badge (6L) &middot; Additional accessories (G4)</div>
         <div class="u-priceline">
           <div class="u-price">$45,004<span>MSRP</span></div>
           <div class="u-ids">Reserved by another customer</div>
@@ -1259,7 +1243,7 @@ const SHEET_LIVE = true;
         <div class="u-trim">RAV4 Plug-in Hybrid XSE</div>
         <div class="u-pt phv">Plug-in Hybrid AWD &middot; 324 hp &middot; 52-mile EV range<sup>1</sup></div>
         <div class="u-color"><span class="swatch sw-storm"></span>Black on Storm Cloud &middot; Black interior</div>
-        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; Driver Assist Package (DA) &middot; JBL Premium Audio Package (EJ) &middot; Panoramic Moonroof Package (SR) &middot; All-Weather Liner Package (2T) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Additional accessories (TX 8J E7 EG)</div>
+        <div class="u-equip"><b>Options:</b> Weather Package (CY) &middot; Driver Assist Package (DA) &middot; JBL Premium Audio Package (EJ) &middot; Panoramic Moonroof Package (SR) &middot; All-Weather Liner Package (2T) &middot; Illumination Package (4A) &middot; Body Side Moldings (BM) &middot; Door Edge Guards (D5) &middot; Mudguards (MF) &middot; Rear Bumper Protector (EG) &middot; Additional accessories (TX 8J E7)</div>
         <div class="u-priceline">
           <div class="u-price">$54,739<span>MSRP</span></div>
           <div class="u-ids">Reserved by another customer</div>
